@@ -1,0 +1,28 @@
+:host ::ng-deep {
+    .p-progressbar {
+        height: .5rem;
+        background-color: #D8DADC;
+    
+        .p-progressbar-value {
+            background-color: #607D8B;
+        }
+    }
+}
+
+.header {
+
+    height: 40px;
+    margin-bottom: 1rem;
+
+    button {
+        height: 40px;
+        width: 150px;
+        background-color: white;
+        border: none;
+        border-radius: 5px;
+        margin: 10px;
+        background-color: var(--ui-blue, #04A9F4);;
+        color: white;
+        
+    }
+}

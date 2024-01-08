@@ -1,0 +1,54 @@
+<div class="section-container">
+<div class="inner-container">
+    <div>
+        <div class="back">
+            <span (click)="handleBack()" class="back-icon"><i class="fa-solid fa-arrow-left"></i> Back</span>
+        </div>
+        <h1>
+            Add Business Information</h1>
+        <!-- <form> -->
+            <div class="top-row">
+                <div class="input-container">
+                    <label>Business Name <span class="asterik">*</span></label>
+                    <input [(ngModel)]="businessName" class="input-field" type="text" />
+                </div>
+                <div class="input-container">
+                    <label>Services Offered <span class="asterik">*</span></label>
+                    <input [(ngModel)]="servicesOffered" class="input-field" type="text" />
+                </div>
+            </div>
+            <div class="top-row">
+                <div class="input-container">
+                    <label>Business Email<span class="asterik">*</span></label>
+                    <input [(ngModel)]="businessEmail" class="input-field" type="text" />
+                </div>
+                <div class="input-container">
+                    <label>Business Contact <span class="asterik">*</span></label>
+                    <input [(ngModel)]="businessContact" class="input-field" type="text" />
+                </div>
+            </div>
+
+            <div class="top-row">
+                <div class="input-container">
+                    <label>Social Media Handle<span class="asterik">*</span></label>
+                    <input [(ngModel)]="socialMediaHandle" class="input-field" type="text" />
+                </div>
+                <div class="input-container">
+                    <label>Business Website<span class="asterik">*</span></label>
+                    <input [(ngModel)]="businessWebsite" class="input-field" type="text" />
+                </div>
+            </div>
+            <div class="top-row">
+                <div class="input-container">
+                    <label>Description<span class="asterik">*</span></label>
+                    <textarea class="custom-textarea" placeholder="Enter project description(Optional)" [(ngModel)]="description"></textarea>
+                </div>
+                <div class="input-container">
+                    <label>Location<span class="asterik">*</span></label>
+                    <input [(ngModel)]="location" class="input-field" type="text" />
+                    <button (click)="handleSubmit()" class="next-button">Submit<i *ngIf="loading" style="display: inline-block; margin-left: 2rem;" class="fas fa-spinner fa-spin"></i></button>
+                </div>
+            </div>
+        <!-- </form> -->
+    </div>
+</div>
