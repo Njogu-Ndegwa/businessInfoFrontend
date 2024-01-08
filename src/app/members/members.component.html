@@ -1,0 +1,27 @@
+<div>
+    <app-card>
+        <div class="table-header">
+            <p>Members</p>
+            <button (click)="addMember()" class="deposit-button">New Member</button>
+        </div>
+<div class="card">
+    <p-table styleClass="custom-table"[value]="members" [tableStyle]="{ 'min-width': '50rem' }">
+        <ng-template pTemplate="header">
+            <tr>
+                <th>ID</th>
+                <th>Member Name</th>
+                <th>Phone Number</th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-member>
+            <tr>
+                <td>{{member.id }}</td>
+                <td>{{member.member_name }}</td>
+                <td>{{member.phone_number }}</td>
+            </tr>
+        </ng-template>
+    </p-table>
+</div>
+    </app-card>
+</div>
+

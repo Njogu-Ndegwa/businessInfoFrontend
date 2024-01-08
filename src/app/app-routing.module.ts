@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-
+import { DashboardComponent } from './dashboard/dashboard.component';
 const routes: Routes = [
   {
     path: '',
@@ -27,23 +27,66 @@ const routes: Routes = [
       ),
   },
 
-  {
-    path: 'trading-bot',
-    loadChildren: () =>
-      import('./trading-bot/trading-bot.module').then(
-        (m) => m.TradingBotModule
-
-      ),
-  },
 
   {
-    path: 'dashboard',
-    loadChildren: () =>
-      import('./dashboard/dashboard.module').then(
-        (m) => m.DashboardModule
-      
-      ),
-  },
+      path: 'dashboard',
+      component: DashboardComponent,
+      children: [
+        {
+          path: 'deposit',
+          loadChildren: () =>
+            import('./deposit/deposit.module').then(
+              (m) => m.DepositModule
+            ),
+        }, 
+        {
+          path: 'reports',
+          loadChildren: () =>
+            import('./reports/reports.module').then(
+              (m) => m.ReportsModule
+            ),
+        }, 
+        {
+          path: 'transactions',
+          loadChildren: () =>
+            import('./transactions/transactions.module').then(
+              (m) => m.TransactionsModule
+            ),
+        },
+        {
+          path: 'withdraw',
+          loadChildren: () =>
+            import('./withdraw/withdraw.module').then(
+              (m) => m.WithdrawModule
+            ),
+        },
+        {
+          path: 'members',
+          loadChildren: () =>
+            import('./members/members.module').then(
+              (m) => m.MembersModule
+            ),
+        },
+
+        {
+          path: 'partners',
+          loadChildren: () =>
+            import('./partners/partners.module').then(
+              (m) => m.PartnersModule
+            ),
+        },
+
+        {
+          path: 'loans',
+          loadChildren: () =>
+            import('./loans/loans.module').then(
+              (m) => m.LoansModule
+            ),
+        },
+      ]
+    
+
+  }
 ];
 
 @NgModule({

@@ -4,9 +4,10 @@ import { CommonModule } from '@angular/common';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { TradingBotRoutingModule } from './trading-bot-routing.module';
 import { NgCircleProgressModule } from 'ng-circle-progress';
+
 @NgModule({
   declarations: [
-// TradingBotComponent
+// TradingBotComponet
   ],
   imports: [
     CommonModule,

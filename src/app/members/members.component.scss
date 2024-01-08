@@ -1,0 +1,21 @@
+p {
+    color: white;
+    font-size: 20px;
+    margin-top: 1rem;
+}
+
+.table-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom:1rem;
+
+    .deposit-button {
+        border: none;
+        background: linear-gradient(to bottom right, #51aef5, #08217c);
+        height: 40px;
+        border-radius: 5px;
+        color: white;
+        margin-top: 1rem;
+    }
+}
+

@@ -1,0 +1,46 @@
+.header { 
+
+    margin-bottom: 2rem;
+    span {
+        font-size: 16px;
+        color: white;
+        cursor: pointer;
+    }
+}
+
+.input-container {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    width: 70%;
+    .custom-input {
+        border-radius: 5px;
+        border: 1.5px solid #5a597d;
+        background-color: #f0f0f000;
+        height: 40px;
+        text-indent: 10px;
+        color: white;
+    }
+
+    .custom-input:focus {
+        outline: none;
+    }
+}
+.withdraw-button {
+    border: none;
+    background: linear-gradient(to bottom right, #51aef5, #08217c);
+    height: 40px;
+    border-radius: 5px;
+    color: white;
+    margin-top: 1.25rem;
+    width: 100%;
+}
+.button-container {
+    width: 25%;
+}
+.input-row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}

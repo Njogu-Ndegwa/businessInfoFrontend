@@ -2,23 +2,26 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { DashboardComponent } from './dashboard.component';
-import { DashboardRoutingModule } from './dashboard-route.module';
+// import { DashboardRoutingModule } from './dashboard-route.module';
 import { NgChartsModule } from 'ng2-charts';
-import { ReportsComponent } from '../reports/reports.component';
 import { TradingBotComponent } from '../trading-bot/trading-bot.component';
 import { NgCircleProgressModule } from 'ng-circle-progress';
+import { TableModule } from 'primeng/table';
+import {CardModule} from 'primeng/card';
+// import { RouterModule } from '@angular/router';
 @NgModule({
   declarations: [
-DashboardComponent,
-ReportsComponent,
-TradingBotComponent
+TradingBotComponent,
   ],
   imports: [
-    DashboardRoutingModule,
+    // DashboardRoutingModule,
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
     NgChartsModule,
+    TableModule,
+    CardModule,
+    // RouterModule,
     NgCircleProgressModule.forRoot({
       "backgroundColor": "#000000",
       "backgroundOpacity": 0.9,

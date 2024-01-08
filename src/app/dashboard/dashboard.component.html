@@ -10,11 +10,6 @@
             </div>
         </div>
         <div class="right-content">
-            <!-- <p><i class="fa-regular fa-bell"></i></p> -->
-            <div class="input-container">
-                <input class="custom-input" placeholder="Search your items" />
-                <i class="fas fa-search"></i>
-            </div>
             <div class="bell-icon">
                 <i class="fa-regular fa-bell"></i>
             </div>
@@ -49,22 +44,37 @@
     </div>
     <div class="container-fluid">
         <div class="row" style="min-height: 90vh;">
-
-            <div class="col-md-2" style="margin: 0; padding: 0;">
+            <div class="col-md-2" style="margin: 0; padding: 0;" >
                 <div class="sidebar">
                     <div class="sidebar-content">
                         <ul>
                             <li [class.active-link]="isActive('dashboard')">
                                 <span><i class="fas fa-tachometer-alt"></i></span>
-                                <a (click)="setActive('dashboard')">Dashboard</a>
+                                <a (click)="setActive('dashboard')" routerLink="/dashboard/reports">Dashboard</a>
                             </li>
-                            <li [class.active-link]="isActive('wallet')">
+                            <li [class.active-link]="isActive('partners')">
+                                <span><i class="fa-solid fa-user-tie"></i></span>
+                                <a (click)="setActive('partners')" routerLink="/dashboard/partners">Partners</a>
+                            </li>
+                            <li [class.active-link]="isActive('members')">
+                                <span><i class="fa fa-users" aria-hidden="true"></i></span>
+                                <a (click)="setActive('members')" routerLink="/dashboard/members">Members</a>
+                            </li>
+                            <li [class.active-link]="isActive('transactions')">
+                                <span><i class="fa-solid fa-money-bill-transfer"></i></span>
+                                <a (click)="setActive('transactions')" routerLink="/dashboard/transactions">Transactions</a>
+                            </li>
+                            <li [class.active-link]="isActive('deposit')">
                                 <span><i class="fas fa-wallet"></i></span>
-                                <a (click)="setActive('wallet')">Wallet</a>
+                                <a (click)="setActive('deposit')" routerLink="/dashboard/deposit">Deposits</a>
                             </li>
-                            <li [class.active-link]="isActive('trading-bot')">
-                                <span><i class="fas fa-robot"></i></span>
-                                <a (click)="setActive('trading-bot')">Trading Bot</a>
+                            <li [class.active-link]="isActive('withdraw')">
+                                <span><i class="fa-solid fa-vault"></i></span>
+                                <a (click)="setActive('withdraw')" routerLink="/dashboard/withdraw">Withdrawals</a>
+                            </li>
+                            <li [class.active-link]="isActive('loans')">
+                                <span><i class="fa-solid fa-landmark"></i></span>
+                                <a (click)="setActive('loans')" routerLink="/dashboard/loans">Loans</a>
                             </li>
                             <li [class.active-link]="isActive('settings')">
                                 <span><i class="fas fa-cog"></i></span>
@@ -76,12 +86,17 @@
             </div>
 
             <div class="col-md-10" style="margin-left: -1rem;">
-                <app-reports *ngIf="activeLink ==='dashboard'">
+                <router-outlet></router-outlet>
+                <!-- <app-reports *ngIf="activeLink ==='dashboard'">
 
                 </app-reports>
-                <app-trading-bot *ngIf="activeLink === 'trading-bot'">
+                <app-wallet *ngIf="activeLink === 'transactions'">
 
-                </app-trading-bot>
+                </app-wallet>
+
+                <app-deposit *ngIf="activeLink === 'deposit'">
+                
+                </app-deposit> -->
             </div>
         </div>
     </div>
